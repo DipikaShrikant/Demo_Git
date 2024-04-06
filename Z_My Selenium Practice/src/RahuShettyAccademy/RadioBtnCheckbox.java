@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 public class RadioBtnCheckbox {
 
 	public static void main(String[] args) throws InterruptedException {
-				System.out.println("program started");
+				System.out.println("program started ===");
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\admin\\Documents\\ADipika\\Software testing\\chromedriver-win32\\chromedriver.exe");
