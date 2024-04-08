@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 public class slider {
@@ -21,9 +22,11 @@ public class slider {
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		Actions act = new Actions(driver);
 
-		WebElement drag = driver.findElement(By.cssSelector("a[class=\"ui-slider-handle ui-state-default ui-corner-all\"]"));
-	
-	act.clickAndHold(drag).dragAndDropBy(drag, 10, 10);
+		WebElement drag = driver
+				.findElement(By.cssSelector("a[class=\"ui-slider-handle ui-state-default ui-corner-all\"]"));
+
+		act.dragAndDropBy(drag, 180, 0).build().perform();
+		driver.quit();
 	}
 
 }
